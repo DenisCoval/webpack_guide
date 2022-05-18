@@ -8,8 +8,8 @@ module.exports = {
     // entry: './src/index.js',
     entry: {
         index: './src/index.js',
-        print: './src/print.js',
-        teste: './src/print.js'
+        print: './src/print.js'
+        // teste: './src/print.js'
     },
     output: {
         // filename: 'bundle.js',
@@ -18,11 +18,11 @@ module.exports = {
         // clean: true Apaga na pasta dist ficheiros que não sao utilizados
     },
     plugins: [
+        new HtmlWebpackPlugin({
+            title: 'Webpack-Guide-teste'
+        }),
         new MiniCssExtractPlugin({
             filename: '[name].css'
-        }),
-        new HtmlWebpackPlugin({
-            title: 'Webpack-Guide'
         })
     ],
     module: {
