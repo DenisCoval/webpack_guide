@@ -7,8 +7,8 @@ module.exports = {
     mode: 'production',
     // entry: './src/index.js',
     entry: {
-        index: './src/index.js',
-        print: './src/print.js'
+        index: './src/index.js'
+        // print: './src/print.js'
     },
     output: {
         // filename: 'bundle.js',
@@ -33,9 +33,9 @@ module.exports = {
         ]
     },
     optimization: {
-        splitChunks: {
-            chunks: 'all'
-        },
+        // splitChunks: {
+        //     chunks: 'all'
+        // },
         minimizer: [
             // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
             // `...`,
