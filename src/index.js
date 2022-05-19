@@ -10,7 +10,7 @@ function component() {
     element.classList.add('hello')
 
     btn.innerHTML = 'Click me and check the console!'
-    btn.onclick = printMe
+    // btn.onclick = printMe
 
     element.appendChild(btn)
 

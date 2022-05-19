@@ -9,13 +9,12 @@ module.exports = {
     entry: {
         index: './src/index.js',
         print: './src/print.js'
-        // teste: './src/print.js'
     },
     output: {
         // filename: 'bundle.js',
         filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist')
-        // clean: true Apaga na pasta dist ficheiros que não sao utilizados
+        path: path.resolve(__dirname, 'dist'),
+        clean: true //Apaga na pasta dist ficheiros que não sao utilizados
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -34,6 +33,9 @@ module.exports = {
         ]
     },
     optimization: {
+        splitChunks: {
+            chunks: 'all'
+        },
         minimizer: [
             // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
             // `...`,
