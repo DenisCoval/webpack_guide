@@ -2,6 +2,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { BundleStatsWebpackPlugin } = require('bundle-stats-webpack-plugin')
 
 module.exports = {
     mode: 'production',
@@ -22,7 +23,8 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({
             filename: '[name].css'
-        })
+        }),
+        new BundleStatsWebpackPlugin()
     ],
     module: {
         rules: [
